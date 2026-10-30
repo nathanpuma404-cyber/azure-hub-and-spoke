@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "hashicorp.terraform",
+    "redhat.vscode-yaml",
+    "yzhang.markdown-all-in-one",
+    "github.vscode-github-actions"
+  ]
+}

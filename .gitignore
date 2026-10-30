@@ -1,0 +1,55 @@
+# Terraform working directories and plugin cache
+**/.terraform/*
+
+# Terraform state files (state lives in Azure Storage, never in Git)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Saved plan files
+*.tfplan
+tfplan
+plan.out
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files (local only)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Variable files that might contain secrets
+*.auto.tfvars
+*.auto.tfvars.json
+*.secret.tfvars
+secrets.tfvars
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Environment files and keys (must never be committed)
+.env
+*.env
+*.pem
+*.key
+id_rsa*
+azure_hubspoke*
+
+# Operating system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor files (keep shared VS Code settings)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# Note: .terraform.lock.hcl is intentionally NOT ignored.
+# Commit it so CI uses the same provider versions you tested with.
