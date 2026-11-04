@@ -113,7 +113,7 @@ resource "azurerm_route_table" "spoke" {
 resource "azurerm_subnet_route_table_association" "workload" {
   for_each = local.firewall_spokes
 
-  subnet_id      = azurerm_subnet.workload.spoke[each.key].id
+  subnet_id      = azurerm_subnet.workload[each.key].id
   route_table_id = azurerm_route_table.spoke[each.key].id
 
 }

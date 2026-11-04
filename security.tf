@@ -100,6 +100,6 @@ resource "azurerm_network_security_rule" "deny_vnet_inbound" {
 resource "azurerm_subnet_network_security_group_association" "workload" {
   for_each = var.spokes
 
-  subnet_id                 = azurrm_subnet.workdload[each.key].id
+  subnet_id                 = azurerm_subnet.workload[each.key].id
   network_security_group_id = azurerm_network_security_group.workload[each.key].id
 }
