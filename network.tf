@@ -41,7 +41,7 @@ resource "azurerm_subnet" "bastion" {
   name                 = "AzureBastionSubnet"
   resource_group_name  = azurerm_resource_group.lab.name
   virtual_network_name = azurerm_virtual_network.hub.name
-  address_prefixes     = [var.hub_firewall_subnet_prefix]
+  address_prefixes     = [var.hub_bastion_subnet_prefix]
 }
 
 # Spokes
