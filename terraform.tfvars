@@ -8,7 +8,7 @@ resource_group_name = "rg-hubspoke-lab-aue"
 enable_firewall = true
 enable_bastion  = true
 
-vm_size        = "Standard_B1s"
+vm_size        = "Standard_B1ms"
 admin_username = "azureuser"
 
 spokes = {
